@@ -66,7 +66,7 @@ module "todo_service" {
   create_networking = true
 
   # CIDR that is allowed to reach the ALB on port 80.
-  # For the lab, use the CIDR your instructor provides (never use 0.0.0.0/0).
+  # For the lab, use your own machine's public IP as a /32 (never use 0.0.0.0/0).
   alb_ingress_cidr = var.alb_ingress_cidr
 
   # Container images — leave empty during Step 1 (ECR repos will be created
@@ -91,7 +91,7 @@ variable "aws_region" {
 }
 
 variable "alb_ingress_cidr" {
-  description = "CIDR block allowed to reach the Application Load Balancer on port 80. Ask your instructor for the correct value."
+  description = "CIDR block allowed to reach the Application Load Balancer on port 80. Use your machine's public IP as a /32 CIDR (for example, 203.0.113.42/32)."
   type        = string
 }
 

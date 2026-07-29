@@ -8,7 +8,9 @@
 
 ## Service Context
 
-<!-- Copilot: summarize what the todo-service is and how it will be hosted (from docs/project-overview.md) -->
+The todo-service is a simple full-stack task management app used as the baseline service for this golden path lab: a React frontend that calls a stateless Node.js/Express CRUD API (`/api/todos`), with in-memory todo storage for lab simplicity.
+
+In this path, the service is containerized and hosted on AWS ECS Fargate behind an Application Load Balancer, with separate frontend and backend containers/images, CloudWatch logging, and ECS Container Insights for runtime observability.
 
 ---
 
